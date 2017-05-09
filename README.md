@@ -18,6 +18,8 @@ CentOS7
 ** c4bb10e87ee2526eb8592a09241ad482db39016d
 ** 04771560237c57ed92b2b09c73744cc332bd2ff8
 * Chapter2
+** f42b417fe2b017922bb90b1b18d606b1e4ccdccc
+*** PGの初歩の部分が割合を占めるため一部を割愛している。
 * Chapter3
 * Chapter4
 * Chapter5
