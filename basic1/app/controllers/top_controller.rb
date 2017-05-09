@@ -8,4 +8,9 @@ class TopController < ApplicationController
   end
   def about
   end
+
+  private
+  def hoge(a)
+  	return 0
+  end
 end

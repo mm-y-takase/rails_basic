@@ -55,4 +55,5 @@ Rails.application.routes.draw do
   #   end
   root "top#index"
   get "about" => "top#about", as: "about"
+  get "lessons/:action(/:name)" => "lessons"
 end
