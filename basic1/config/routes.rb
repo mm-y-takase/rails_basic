@@ -54,4 +54,5 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
   root "top#index"
+  get "about" => "top#about", as: "about"
 end

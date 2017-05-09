@@ -6,4 +6,6 @@ class TopController < ApplicationController
   	@number = 0
   	@boolean = false
   end
+  def about
+  end
 end
