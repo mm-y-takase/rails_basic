@@ -8,6 +8,7 @@
 </style>
 
 <h1><%= @page_title %></h1>
+<%= render "shared/flashMessage", _flash: flash.notice %>
 <% if @members.present? %>
 <%= form_tag :search_members , method: :get do %>
 <p><%= text_field_tag "q", params[:q] %></p>

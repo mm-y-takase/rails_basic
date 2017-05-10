@@ -21,11 +21,28 @@ class MembersController < ApplicationController
   end
 
   def create
+    @member = Member.new(params[:member])
+    if @member.save
+      redirect_to @member, notice: "登録完了しました"
+    else
+      render "new"
+    end
   end
 
   def update
+    puts(params[:id])
+    @member = Member.find(params[:id])
+    @member.assign_attributes(params[:member])
+    if @member.save
+      redirect_to @member, notice: "更新しました"
+    else
+      render "edit"
+    end
   end
 
   def destroy
+    @member = Member.find(params[:id])
+    @member.destroy
+    redirect_to :members, notice: "削除が完了しました"
   end
 end
