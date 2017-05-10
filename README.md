@@ -21,18 +21,26 @@ CentOS7
 
 *1day*
 * Chapter1
-** c4bb10e87ee2526eb8592a09241ad482db39016d
-** 04771560237c57ed92b2b09c73744cc332bd2ff8
+** commit: c4bb10e87ee2526eb8592a09241ad482db39016d
+** commit: 04771560237c57ed92b2b09c73744cc332bd2ff8
 * Chapter2
-** f42b417fe2b017922bb90b1b18d606b1e4ccdccc
+** commit: f42b417fe2b017922bb90b1b18d606b1e4ccdccc
 *** PGの初歩の部分が割合を占めるため一部を割愛している。
 * Chapter3
-
+** commit: 2be20527ae42fe64723f0307e8276f2d919fb1d3
+** commit: 5da296802920e90bd3954db614d835b22c544415
+** commit: 7016c9bfd80e18593690622a7c52b3cf69361218
+*** 作成物が後々のchapterで使うとのことなので理解度に関わらずママ作成する
 -----
 
+*2day*
 * Chapter4
+** commit:8e7d9016f27d3edf502c2fc9270ddd352c9140eb
+*** Model作成とDB作成のためマイグレーションが必要
 * Chapter5
 * Chapter6
+
+-----
 * Chapter7
 * Chapter8
 * Chapter9
