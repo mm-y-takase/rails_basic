@@ -31,6 +31,24 @@ class LessonsController < ApplicationController
 		render text: @set_message
 	end
 
+	def step8
+		@price = (100 * 1.05).floor
+	end
+
+	def step9
+		@price = nil
+		render "step8"
+	end
+
+	def step10
+		@population = 7044144
+		@surface = 141.31
+	end
+
+	def step11
+		@body = "hoge¥nhogehoge¥nhohohohohohohoho"
+	end
+
 	private
 	def set_message
 		@set_message = "private method"
