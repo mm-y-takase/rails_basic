@@ -3,7 +3,7 @@
 #
 # Examples:
 #
-  cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
+  # cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 table_names = %w(members)
 puts table_names
