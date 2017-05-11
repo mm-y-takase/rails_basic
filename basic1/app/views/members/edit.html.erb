@@ -1,5 +1,6 @@
 <% @page_title = "会員編集" %>
 <h1> <%= @page_title%> </h1>
+<%= render "shared/formErrors", obj: @member %>
 <p><%= link_to "to detail view", @member %></p>
 <%= form_for @member do |form| %>
   <%= render "form", form: form %>

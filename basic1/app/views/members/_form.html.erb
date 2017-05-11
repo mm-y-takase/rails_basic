@@ -1,37 +1,37 @@
 <table class="attr">
   <tr>
-    <th><%= form.label :number, "number" %></th>
+    <th><%= form.label :number %></th>
     <td><%= form.text_field :number %></td>
   </tr>
   <tr>
-    <th><%= form.label :name, "name" %></th>
+    <th><%= form.label :name %></th>
     <td><%= form.text_field :name %></td>
   </tr>
   <tr>
-    <th><%= form.label :fullname, "fullname" %></th>
+    <th><%= form.label :fullname %></th>
     <td><%= form.text_field :full_name %></td>
   </tr>
   <tr>
     <th>gender</th>
     <td>
       <%= form.radio_button :gender, 0 %>
-      <%= form.label :gender_0, "men" %>
+      <%= form.label :gender_0 %>
       <%= form.radio_button :gender, 1 %>
-      <%= form.label :gender_1, "wom" %>
+      <%= form.label :gender_1 %>
     </td>
   </tr>
   <tr>
-    <th><%= form.label :birthday, "birth", for: "member_birthday_li" %></th>
+    <th><%= form.label :birthday, for: "member_birthday_li" %></th>
     <td><%= form.date_select :birthday, start_year:1940, end_year: Time.now.year, use_month_numbers: true %></td>
   </tr>
   <tr>
-    <th><%= form.label :email, "mail" %></th>
+    <th><%= form.label :email %></th>
     <td><%= form.text_field :email %></td>
   </tr>
   <tr>
     <th>roll</th>
     <td>
       <%= form.check_box :administrator %>
-      <%= form.label :administrator, "管理者権限" %></td>
+      <%= form.label :administrator %></td>
   </tr>
 </table>

@@ -1,5 +1,6 @@
 <% @page_title = "会員登録" %>
 <h1> <%= @page_title%> </h1>
+<%= render "shared/formErrors", obj: @member %>
 
 <%= form_for @member do |form| %>
   <%= render "form", form: form %>
