@@ -23,6 +23,7 @@ ja:
   activerecord:
     models:
       member: 会員情報
+      article: 記事
     attributes:
       member:
         number: 背番号
@@ -34,6 +35,9 @@ ja:
         birthday: 誕生日
         email: メールアドレス
         administrator: 管理者権限
+        password: パスワード
+        password_confirmation: パスワードの確認
+      article:
     errors:
       messages:
         record_invalid: "バリデーションに失敗しました: %{errors}"
