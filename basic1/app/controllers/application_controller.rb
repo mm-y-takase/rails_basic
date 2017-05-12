@@ -6,29 +6,29 @@ class ApplicationController < ActionController::Base
   class NotFound < StandardError; end
 
   if Rails.env.production?
-    rescure_form Exception, with: :rescure_500
-    rescure_form ActionController::RoutingError, with: :rescure_404
-    rescure_form ActiveRecord::RecordNotFound, with: :rescure_404
-    rescure_form ActionController::ParameterMissing, with: :rescure_400
+    rescue_from Exception, with: :rescue_500
+    rescue_from ActionController::RoutingError, with: :rescue_404
+    rescue_from ActiveRecord::RecordNotFound, with: :rescue_404
+    rescue_from ActionController::ParameterMissing, with: :rescue_400
   end
 
-  resucue_from Forbidden, with: :rescure_403
-  resucue_from NotFount, with: :rescure_404
+  rescue_from Forbidden, with: :rescue_403
+  rescue_from NotFound, with: :rescue_404
 
   private
-  def rescure_400(exception)
+  def rescue_400(exception)
     render "errors/bad_request", status: 400, layout: "error", formats: [:html]
   end
 
-  def rescure_403(exception)
+  def rescue_403(exception)
     render "errors/forbidden", status: 403, layout: "error", formats: [:html]
   end
 
-  def rescure_404(exception)
+  def rescue_404(exception)
     render "errors/NotFound", status: 404, layout: "error", formats: [:html]
   end
 
-  def rescure_500(exception)
+  def rescue_500(exception)
     render "errors/internal_server_error", status: 500, layout: "error", formats: [:html]
   end
 

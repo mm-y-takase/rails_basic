@@ -51,6 +51,9 @@ ja:
           has_one: "%{record}が存在しているので削除できません"
           has_many: "%{record}が存在しているので削除できません"
         expired_at_too_old: は掲載開始日以降の日付を入力してください
+  will_paginate:
+    previous_label: "前"
+    next_label: "次"
   date:
     abbr_day_names:
     - 日
