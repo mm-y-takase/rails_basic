@@ -24,6 +24,7 @@ ja:
     models:
       member: 会員情報
       article: 'ニュース記事'
+      entry: ブログ記事
     attributes:
       member:
         number: 背番号
@@ -44,6 +45,14 @@ ja:
         expired_at: 掲載終了日
         no_expiration: 掲載終了日を設定しない
         member_only: 会員限定
+      entry:
+        title: タイトル
+        body: 本文
+        posted_at: 日時
+        status: 状態
+        status_draft: 下書き
+        status_member_only: 会員限定公開
+        status_poblic: 公開
     errors:
       messages:
         record_invalid: "バリデーションに失敗しました: %{errors}"

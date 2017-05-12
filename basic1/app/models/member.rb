@@ -1,6 +1,8 @@
 class Member < ActiveRecord::Base
   include EmailAddressChecker
 
+  has_many :entries, dependent: :destroy
+
   validates :number, presence: true,
     numericality: { 
       only_integer:true,

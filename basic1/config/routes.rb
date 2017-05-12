@@ -61,10 +61,13 @@ Rails.application.routes.draw do
 
   resources :members do
     collection {get "search"}
+    resources :entries, only: [:index]
   end
 
   resources :articles
+  resources :entries
   resource :session, only: [:create, :destroy]
   resource :account, only: [:show, :edit, :update]
+
   match "*anything" => "top#not_found", via: [:get, :post, :patch, :delete]
 end
