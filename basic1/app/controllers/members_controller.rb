@@ -22,7 +22,7 @@ class MembersController < ApplicationController
   end
 
   def create
-    @member = Member.new(params[:member])
+    @member = Member.new(member_params)
     if @member.save
       redirect_to @member, notice: "登録完了しました"
     else
@@ -33,7 +33,7 @@ class MembersController < ApplicationController
   def update
     puts(params[:id])
     @member = Member.find(params[:id])
-    @member.assign_attributes(params[:member])
+    @member.assign_attributes(member_params)
     if @member.save
       redirect_to @member, notice: "更新しました"
     else
@@ -46,4 +46,12 @@ class MembersController < ApplicationController
     @member.destroy
     redirect_to :members, notice: "削除が完了しました"
   end
+
+  private
+  def member_params
+    attrs = [:number, :name, :full_name, :gender, :birthday, :email, :password, :password_confirmation]
+    attrs << :administrator if current_member.administrator?
+    params.require(:member).permit(attrs)
+  end
+
 end
