@@ -18,7 +18,7 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(params[:article])
     if @article.save
-      redirect_to @article, notice "登録完了しました"
+      redirect_to @article, notice: "登録完了しました"
     else
       render "new"
     end
@@ -36,6 +36,9 @@ class ArticlesController < ApplicationController
   end
 
   def destroy
+    @article = Article.find(params[:id])
+    @article.destroy
+    redirect_to :articles
   end
 
 end

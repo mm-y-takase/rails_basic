@@ -1,5 +1,5 @@
-<% #render "shared/formErrors", _flash: %>
-<% render "shared/errors", obj: @article %>
+<% render "shared/formErrors", obj:@article %>
+<% #render "shared/errors", obj: @article %>
 <table class="attr">
   <tr>
     <th><%= form.label :title %></th>
@@ -7,7 +7,7 @@
   </tr>
   <tr>
     <th><%= form.label :body %></th>
-    <td><%= form.text_area :body, rows :15 %></td>
+    <td><%= form.text_area :body, rows: 15 %></td>
   </tr>
   <tr>
     <th><%= form.label :released_at, for: "article_released_at_li" %></th>
@@ -18,13 +18,9 @@
     <td><%= form.date_select :expired_at, start_year: Time.now.year, end_year: Time.now.year+1, use_month_numbers: true %></td>
   </tr>
   <tr>
-    <th><%= Article.fuman_attribute_name(:member_only)%></th>
+    <th><%= Article.human_attribute_name(:member_only)%></th>
     <td>
       <%= form.check_box :member_only %>
       <%= form.label :member_only %></td>
   </tr>
 </table>
-
-<% unless @member.new_record? %>
-<p>パスワードを変更しないときは、パスワード入力欄を空にしてください。</p>
-<% end %>
