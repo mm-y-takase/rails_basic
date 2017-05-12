@@ -34,6 +34,8 @@ ja:
         birthday: 誕生日
         email: メールアドレス
         administrator: 管理者権限
+        password: PWD
+        password_confirmation: PDW_CFM
     errors:
       messages:
         record_invalid: "バリデーションに失敗しました: %{errors}"

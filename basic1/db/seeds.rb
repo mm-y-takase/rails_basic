@@ -12,7 +12,7 @@ table_names.each do |table_name|
 	puts path
 	puts File.exist?(path)
 	if File.exist?(path)
-		puts "Creating #{table_name}..."
+		puts "Creating #{Rails.env} #{table_name}..."
 		require path
 	end	
 end	
