@@ -2,3 +2,39 @@ h1{
   font-size: 14px;
   color: #666;
 }
+.container{
+  &:after{
+    content:'';
+    clear:both;
+  }
+}
+.headerInner{
+  width:100%;
+  overflow: hidden;
+  &:after{
+    content:'';
+    clear:both;
+  }
+  img{
+    width:80px;
+    float: left;
+  }
+  .menubar{
+    float: left;
+    ul{
+      list-style:none;
+    }
+    li{
+      display: inline-block;
+      padding:8px;
+    }
+  }
+}
+.sidebarWrap{
+  float: right;
+  width: 200px;
+}
+
+.content{
+  padding: 8px;
+}
