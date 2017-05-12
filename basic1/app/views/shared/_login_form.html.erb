@@ -1,17 +1,17 @@
 <h2>lgoin</h2>
-<%= render "formErrors", flash_: flash.alert %>
+<%= render "shared/flashMessage", _flash: flash.alert %>
 <%= form_tag :session do %>
   <table class="loginForm" id="login_form">
     <tr>
       <th>user name</th>
       <td>
-        <%= text_field_tag "name", "", %>
+        <%= text_field_tag "name", "" %>
       </td>
     </tr>
     <tr>
       <th>pw</th>
       <td>
-        <%= password_field_tag "password", "", %>
+        <%= password_field_tag "password", "" %>
       </td>
     </tr>
     <tr>
@@ -20,4 +20,4 @@
       </td>
     </tr>
   </table>
-<%= end %>
+<% end %>

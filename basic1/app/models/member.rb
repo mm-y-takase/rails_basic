@@ -40,7 +40,7 @@ class Member < ActiveRecord::Base
       if member && member.hashed_password.present? && BCrypt::Password.new(member.hashed_password) == password
         member
       else
-        nill
+        nil
       end
     end
     def search(query)

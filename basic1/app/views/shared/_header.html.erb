@@ -4,9 +4,14 @@
   <ul>
     <li><%= menu_link_to "news", :articles %></li>
     <li><%= menu_link_to "blog", "#" %></li>
+    <% if current_member %>
     <li><%= menu_link_to "account", :members %></li>
     <li><%= menu_link_to "admins", "#" %></li>
+    <% end %>
   </ul>
+</div>
+<div>
+  <%= render "shared/sidebar" %>
 </div>
 <div id="article_expired_area">
   <input type="checkbox" id="article_no_expiration">

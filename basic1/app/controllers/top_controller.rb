@@ -5,7 +5,8 @@ class TopController < ApplicationController
     @obj = {a:0,b:1}
     @number = 0
     @boolean = false
-    @articles = Article.open.order(released_at: :desc).limit(5)
+    @articles = Article.open.readable_for(current_member).order(released_at: :desc).limit(5)
+
   end
   def about
   end
