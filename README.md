@@ -35,12 +35,34 @@ CentOS7
 
 *2day*
 * Chapter4
-  * commit:8e7d9016f27d3edf502c2fc9270ddd352c9140eb
+  * commit: 8e7d9016f27d3edf502c2fc9270ddd352c9140eb
     * Model作成とDB作成のためマイグレーションが必要
 * Chapter5
+  * commit: 578a821dc62855f14660e6230418e16f34600758
+  * commit: 363323bf00c611b0fc037cbb4f4b1a34e86d7710
 * Chapter6
+  * commit: 6429ffc79215da8307bcac972694298ece1a33c7
+  * commit: 5a4081a152564c424114f1d761262c01070c373a
+  * commit: a3f43050f1aa804c6a1bc39c89b9e545dc95a622
 
 -----
-* Chapter7
+
+*3day*
+* Chapter7 -> skip
 * Chapter8
-* Chapter9
+  * commit: 2f683c25cfa13deeb3586ec451e0e7ca03ed7516
+  * commit: 31c18e5b7adb95a92b0d018af6a032c5378b896f
+  * next 4day
+
+-----
+
+*4day*
+
+* Chapter7
+  * 2974cb26d92b9965ee77361bb4bd0e6a0888f9ae 
+* Chapter8
+  * b27fb3a0bbea74c61467e7588f1bbd02434378a0
+  * 633f76245b5cb9f1614a39096527bd454900446d
+  * 4348696822c3a7ad0dab21e6421c360df98378f7
+  * 34a0d85ad2a26e6b4f943aed2157690778167d81
+  * a3ca275ff7fe065bca574e90178f6959706fef76
