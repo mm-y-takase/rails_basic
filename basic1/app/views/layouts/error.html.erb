@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ERROR</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div id="container" class="container">
+    <div id="header" class="header">  
+      <h1>ERROR</h1>
+    </div>
+    <div id="content" class="content">
+      <%= yield %>
+    </div>
+    <div id="footer" class="footer">
+      <%= render "shared/footer" %>
+    </div>
+  </div>
+
+</body>
+</html>
