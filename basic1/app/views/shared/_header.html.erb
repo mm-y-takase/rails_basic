@@ -2,7 +2,7 @@
 <div class="menubar">
   <%= menu_link_to "top", root_path %>
   <ul>
-    <li><%= menu_link_to "news", "#" %></li>
+    <li><%= menu_link_to "news", :articles %></li>
     <li><%= menu_link_to "blog", "#" %></li>
     <li><%= menu_link_to "account", :members %></li>
     <li><%= menu_link_to "admins", "#" %></li>
@@ -12,3 +12,6 @@
   <input type="checkbox" id="article_no_expiration">
   <div id="article_expired_at">aaaaaaaaaaaaaaaaaaaa</div>
 </div>
+<% if current_member %>
+<p><%= current_member.name %> さん <%= link_to "logout", :session, method: :delete, data: {confirm: "if your logout ?"} %></p>
+<% end %>

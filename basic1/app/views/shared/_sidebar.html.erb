@@ -1,9 +1,9 @@
-<%= render "shared/login_form" %>
+<%= render "shared/login_form" unless current_member %>
 
 <h2>news</h2>
 <ul>
-<% 5.times do |i| %>
-  <li><%= link_to "news heading","#" %></li>
+<% Article.sidebar_articles(5).each do |article| %>
+  <li><%= link_to article.title, article %></li>
 <% end %>
 </ul>
 

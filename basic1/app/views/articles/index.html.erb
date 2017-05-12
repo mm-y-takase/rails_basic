@@ -1,0 +1,23 @@
+<% @page_title = "newslist" %>
+<h1><%= @page_title %></h1>
+<p><%= link_to "new", :new_article %></p>
+<% if @articles.present? %>
+<table class="list">
+  <tr>
+    <th>title</th>
+    <th>date</th>
+    <th>actions</th>
+  </tr>
+  <% @articles.each do |article| %>
+  <tr>
+    <td><%= link_to article.title, article %></td>
+    <td><%= article.released_at.strftime(%Y%m%d %H:%M) %></td>
+    <td>
+      <%= link_to 'edit', [:edit, article] %>
+      <%= link_to 'delete', article, method: :delete, data: {confirm:'is delete?'}%>
+    </td>
+  </tr>
+  <% end %>
+</table>
+
+<% end %>

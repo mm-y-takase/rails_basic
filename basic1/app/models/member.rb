@@ -35,6 +35,14 @@ class Member < ActiveRecord::Base
   end
 
   class << self
+    def authenticate(name,password)
+      member = find_by(name: name)
+      if member && member.hashed_password.present? && BCrypt::Password.new(member.hashed_password) == password
+        member
+      else
+        nill
+      end
+    end
     def search(query)
       rel = order("number")
       if query.present?

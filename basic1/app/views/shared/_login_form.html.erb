@@ -1,23 +1,23 @@
 <h2>lgoin</h2>
-
-<form action="">
+<%= render "formErrors", flash_: flash.alert %>
+<%= form_tag :session do %>
   <table class="loginForm" id="login_form">
     <tr>
       <th>user name</th>
       <td>
-        <input type="text">
+        <%= text_field_tag "name", "", %>
       </td>
     </tr>
     <tr>
       <th>pw</th>
       <td>
-        <input type="password">
+        <%= password_field_tag "password", "", %>
       </td>
     </tr>
     <tr>
       <td>
-        <button type="submit">send</button>
+        <%= submit_tag "ログイン" %>
       </td>
     </tr>
   </table>
-</form>
+<%= end %>
