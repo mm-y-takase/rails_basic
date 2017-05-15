@@ -25,6 +25,7 @@ ja:
       member: 会員情報
       article: 'ニュース記事'
       entry: ブログ記事
+      member_image: 会員画像
     attributes:
       member:
         number: 背番号
@@ -53,6 +54,11 @@ ja:
         status_draft: 下書き
         status_member_only: 会員限定公開
         status_public: 公開
+      member_image:
+        uploaded_image: 画像
+        _destroy: 削除する
+      image:
+        uploaded_image: 画像
     errors:
       messages:
         record_invalid: "バリデーションに失敗しました: %{errors}"
@@ -60,6 +66,8 @@ ja:
           has_one: "%{record}が存在しているので削除できません"
           has_many: "%{record}が存在しているので削除できません"
         expired_at_too_old: は掲載開始日以降の日付を入力してください
+        too_big_image: が大きすぎます（最大64KB）
+        invalid_image: の形式が違います（JPG、GIF、PNGのいずれかである必要があります）
   will_paginate:
     previous_label: "前"
     next_label: "次"
