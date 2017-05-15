@@ -10,4 +10,14 @@ module ApplicationHelper
 			content_tag(:span, text)
 		}
 	end
+
+	def member_image_tag(member, options = {})
+		if member.image.present?
+			path = member_path(member, format: member.image.extension)
+			link_to(image_tag(path, {alt: member.name}.merge(options)),path)
+		else
+			""
+		end
+	end
+
 end
