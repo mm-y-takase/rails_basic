@@ -3,6 +3,7 @@
 
 <% if current_member %>
 <p><%= link_to "ブログ記事の作成", :new_entry %></p>
+<p><%= link_to "投票した記事一覧", :voted_entries %></p>
 <% end %>
 
 <% if @entries.present? %>

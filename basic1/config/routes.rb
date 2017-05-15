@@ -65,7 +65,10 @@ Rails.application.routes.draw do
   end
 
   resources :articles
-  resources :entries
+  resources :entries do
+    member { patch "like", "unlike" }
+    collection { get "voted" }
+  end
   resource :session, only: [:create, :destroy]
   resource :account, only: [:show, :edit, :update]
 
