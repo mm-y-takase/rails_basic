@@ -1,14 +1,23 @@
 <div class="headerInner">
   <%= image_tag("icon.png", alt:"title") %>
+  <p><%= current_member.administrator? %></p>
   <div class="menubar">
     <%= menu_link_to "top", root_path %>
     <ul>
+<% if controller.kind_of?(Admin::Base) %>
+      <li><%= link_to "Member Manage", :admin_members %></li>
+      <li><%= link_to "Article Manage", :admin_articles %></li>
+      <li><%= link_to "top", :root %></li>
+<% else %>
       <li><%= menu_link_to "news", :articles %></li>
       <li><%= menu_link_to "blog", :entries %></li>
       <% if current_member %>
       <li><%= menu_link_to "account", :members %></li>
-      <li><%= menu_link_to "admins", "#" %></li>
+        <% if current_member.administrator? %>
+      <li><%= menu_link_to "admins", :admin_root %></li>
+        <% end %>
       <% end %>
+<% end %>
     </ul>
   </div>
 </div>
