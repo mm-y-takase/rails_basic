@@ -4,7 +4,8 @@
 
 特定書籍を進めるための練習用レポジトリです。
 
-書籍：https://www.amazon.co.jp/s/?ie=UTF8&keywords=%E6%94%B9%E8%A8%823%E7%89%88%E5%9F%BA%E7%A4%8E+ruby+on+rails
+書籍：[基礎 Ruby on Rails (amazon link)](https://www.amazon.co.jp/s/?ie=UTF8&keywords=%E6%94%B9%E8%A8%823%E7%89%88%E5%9F%BA%E7%A4%8E+ruby+on+rails)
+
 ISBN CODE: ISBN978-4-8443-3815-4
 
 ※ Vagrant環境は仮です。
