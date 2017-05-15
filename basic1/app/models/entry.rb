@@ -1,16 +1,16 @@
 class Entry < ActiveRecord::Base
   belongs_to :author, class_name: "Member", foreign_key: "member_id"
 
-  STATUS_VALUES = ["draft", "member_only", "public"]
+  STATUS_VALUES = %w(draft member_only public)
 
-  validates :title, presence: true, length: {maximum: 200}
+  validates :title, presence: true, length: { maximum: 200 }
   validates :body, :posted_at, presence: true
-  validates :status, inclusion: {in: STATUS_VALUES}
+  validates :status, inclusion: { in: STATUS_VALUES }
 
-  scope :common, -> {where(status: "public")}
-  scope :published, -> {shere("status <>?", "draft")}
-  scope :full, ->(member) { shere("status <>? OR member_id = ?", "draft", member.id) }
-  scope :readble_for, ->(member) {member ? full(member) : common}
+  scope :common, -> { where(status: "public") }
+  scope :published, -> { where("status <> ?", "draft") }
+  scope :full, ->(member) { where("member_id = ? OR status <> ?", member.id, "draft") }
+  scope :readable_for, ->(member) { member ? full(member) : common }
 
   class << self
     def status_text(status)
@@ -18,7 +18,7 @@ class Entry < ActiveRecord::Base
     end
 
     def status_options
-      STATUS_VALUES.map{ |status| [status_text(status). status]}
+      STATUS_VALUES.map { |status| [status_text(status), status] }
     end
 
     def sidebar_entries(member, num = 5)

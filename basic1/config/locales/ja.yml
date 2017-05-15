@@ -52,7 +52,7 @@ ja:
         status: 状態
         status_draft: 下書き
         status_member_only: 会員限定公開
-        status_poblic: 公開
+        status_public: 公開
     errors:
       messages:
         record_invalid: "バリデーションに失敗しました: %{errors}"

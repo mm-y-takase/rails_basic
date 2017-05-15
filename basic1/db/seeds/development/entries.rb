@@ -7,7 +7,7 @@ body =
   member = Member.find_by(name: name)
 
   0.upto(9) do |index|
-    puts(["draft","member_only","public"][index % 3 ])
+    puts("seed entries line:10" + ["draft","member_only","public"][index % 3 ])
     entry = Entry.create(
       author: member,
       title: "blog result num :#{index}",

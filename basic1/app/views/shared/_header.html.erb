@@ -4,7 +4,7 @@
     <%= menu_link_to "top", root_path %>
     <ul>
       <li><%= menu_link_to "news", :articles %></li>
-      <li><%= menu_link_to "blog", "#" %></li>
+      <li><%= menu_link_to "blog", :entries %></li>
       <% if current_member %>
       <li><%= menu_link_to "account", :members %></li>
       <li><%= menu_link_to "admins", "#" %></li>
