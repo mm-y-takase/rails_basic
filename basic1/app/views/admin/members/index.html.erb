@@ -1,0 +1,43 @@
+<%= @page_title = "account list" %>
+<style>
+  td{
+    padding:4px 8px;
+    border-right:1px solid #ccc;
+  }
+
+</style>
+
+<h1><%= @page_title %></h1>
+<%= render "shared/flashMessage", _flash: flash.notice %>
+<% if @members.present? %>
+<%= form_tag :search_admin_members , method: :get do %>
+<p><%= text_field_tag "q", params[:q] %></p>
+<p><%= submit_tag "検索" %></p>
+<% end %>
+<p><%= link_to 'new', :new_admin_member %></p>
+<table class="list">
+  <tr>
+    <th>number</th>
+    <th>name</th>
+    <th>fullname</th>
+    <th>actions</th>
+  </tr>
+  <% @members.each do |member| %>
+  <tr>
+    <td><%= member.number %></td>
+    <td><%= link_to member.name, [:admin, member] %></td>
+    <td><%= member.full_name %></td>
+    <td>
+      <ul>
+        <li><%= link_to 'edit', [:edit, :admin, member] %></li>
+        <li><%= link_to 'del', [:admin, member] , method: :delete, data: { confirm: "majide?s"} %></li>
+      </ul>
+    </td>
+  </tr>
+  <% end %>
+</table>
+<%= will_paginate @members %>
+
+<% else %>
+<p>empty</p>
+<% end %>

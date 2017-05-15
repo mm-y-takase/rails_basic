@@ -1,0 +1,34 @@
+<table class="attr">
+  <tr>
+    <th>画像</th>
+    <td><%= member_image_tag @member, width: 96 %></td>
+  </tr>
+  <tr>
+    <th>number</th>
+    <td><%= @member.number %></td>
+  </tr>
+  <tr>
+    <th>name</th>
+    <td><%= @member.name %></td>
+  </tr>
+  <tr>
+    <th>fullname</th>
+    <td><%= @member.full_name %></td>
+  </tr>
+  <tr>
+    <th>gender</th>
+    <td><%= @member.gender == 0 ? "men" : "wom" %></td>
+  </tr>
+  <tr>
+    <th>birth</th>
+    <td><%= @member.birthday.try(:strftime, "%Y年%m月%d日") %></td>
+  </tr>
+  <tr>
+    <th>mail</th>
+    <td><%= @member.email %></td>
+  </tr>
+  <tr>
+    <th>roll</th>
+    <td><%= @member.administrator? ? "一般" : "管理者" %></td>
+  </tr>
+</table>

@@ -1,0 +1,9 @@
+<% @page_title = "news regist" %>
+<h1><% @page_title %></h1>
+
+<p><%= link_to 'back', [:admin, @article] %></p>
+
+<%= form_for [:admin, @article] do |form| %>
+  <%= render "form", form: form %>
+  <p><%= form.submit %></p>
+<% end %>
